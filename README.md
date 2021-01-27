@@ -72,7 +72,7 @@ Make sure to switch to your test network when using the Dapp
 
 A detailed example can be found at: 
 
-[](https://metamask.zendesk.com/hc/en-us/articles/360043227612-How-to-add-a-custom-Network-RPC-and-or-Block-Explorer)
+https://metamask.zendesk.com/hc/en-us/articles/360043227612-How-to-add-a-custom-Network-RPC-and-or-Block-Explorer
 
 ## **An Example of Importing accounts from Truffle into MetaMask**
 
@@ -82,26 +82,24 @@ Firstly you will need a private key from one of the accounts that was initialed 
 
  
 
-![Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/Capture_Truffle.png](Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/Capture_Truffle.png)
+![Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/Capture_Truffle.png](./client/src/Assets/Capture_Truffle.png)
 
 On startup 10 Test accounts are created, Copy a private key ready to paste into MetaMask.
 
 In MetaMask Select *Import Account*
 
-![Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/ImportOne.png](Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/ImportOne.png)
+![Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/ImportOne.png](./client/src/Assets/ImportOne.png)
 
 Past your private key in and press import
 
-![Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/ImportTwo.png](Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/ImportTwo.png)
+![Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/ImportTwo.png](./client/src/Assets/ImportTwo.png)
 
 You can connect to the website by clicking the *connect button*, this will connect you to the react application when you have it in your current browsing window.
 
-![Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/connected.png](Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/connected.png)
+![Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/connected.png](./client/src/Assets/connected.png)
 
 A detailed example can be found at: 
 
-[](https://metamask.zendesk.com/hc/en-us/articles/360015489331-How-to-import-an-Account)
+https://metamask.zendesk.com/hc/en-us/articles/360015489331-How-to-import-an-Account
 
 To add more accounts, you simply just follow the steps above for importing accounts. You do not need to create a new network every time you import a new account. Importing multiply accounts will come in handy as it means that you can simulate an election.
-
-  **
