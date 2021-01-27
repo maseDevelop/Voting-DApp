@@ -1,5 +1,4 @@
 const StarWarsPoll = artifacts.require("./StarWarsPoll.sol");
-const { assert } = require("console");
 const fetch = require("node-fetch");
 
 
