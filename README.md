@@ -66,7 +66,7 @@ To use the Dapp, you will need to create a local network or use a�
 
 In MetaMask creating a new network is as easy as clicking on the list of networks and then clicking on *Custom RPC.* From here you will be able to give your network a name and address *(Your address must be the same as the one specified in the Dapp. For this project the local address is [http://127.0.0.1:8545](http://127.0.0.1:8545))*. Save the network.
 
-![Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/newNetworkOne.png](Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/newNetworkOne.png)
+![Star%20Wars%20Voting%20Dapp%203cde2a2a3ccb43bbad37dfa9590107b1/newNetworkOne.png](./client/src/Assets/newNetworkOne.png)
 
 Make sure to switch to your test network when using the Dapp
 
