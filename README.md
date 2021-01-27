@@ -88,11 +88,11 @@ On startup 10 Test accounts are created, Copy a private key ready to paste into 
 
 In MetaMask Select *Import Account*
 
-![./client/src/Assets/ImportOne.png](./client/src/Assets/ImportOne.png)
+![./client/src/Assets/ImportOne.png](./client/src/Assets/ImportOne.PNG)
 
 Past your private key in and press import
 
-![./client/src/Assets/ImportTwo.png](./client/src/Assets/ImportTwo.png)
+![./client/src/Assets/ImportTwo.png](./client/src/Assets/ImportTwo.PNG)
 
 You can connect to the website by clicking the *connect button*, this will connect you to the react application when you have it in your current browsing window.
 
