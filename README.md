@@ -55,6 +55,7 @@ npm start
 To run tests from the root directory run:
 
 ```bash
+npm install
 truffle test
 ```
 
