@@ -67,11 +67,18 @@ const CharacterWidget = (props) => {
 
       <Flex>
         {props.accountVoted ? (
-          <Button overflow="hidden" isDisabled={true} flex={1} margin={3} colorScheme="gray">
+          <Button
+            overflow="hidden"
+            isDisabled={true}
+            flex={1}
+            margin={3}
+            colorScheme="gray"
+          >
             Voted
           </Button>
         ) : (
-          <Button overflow="hidden"
+          <Button
+            overflow="hidden"
             colorScheme="yellow"
             flex={1}
             margin={3}
@@ -81,7 +88,7 @@ const CharacterWidget = (props) => {
           </Button>
         )}
 
-        <Button overflow="hidden"  flex={1} margin={3} onClick={onOpen}>
+        <Button overflow="hidden" flex={1} margin={3} onClick={onOpen}>
           More Info
         </Button>
 
@@ -100,7 +107,12 @@ const CharacterWidget = (props) => {
             </ModalBody>
             <ModalFooter>
               {props.accountVoted ? (
-                <Button overflow="hidden" isDisabled={true} colorScheme="gray" mr={3}>
+                <Button
+                  overflow="hidden"
+                  isDisabled={true}
+                  colorScheme="gray"
+                  mr={3}
+                >
                   Voted
                 </Button>
               ) : (
