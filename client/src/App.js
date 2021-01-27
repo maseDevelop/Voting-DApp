@@ -184,7 +184,7 @@ class App extends Component {
       };
     });
 
-    //Sorting the value pairsf
+    //Sorting the value pairs
     newArr.sort((a, b) => a.voteCount - b.voteCount);
 
     //Get top three values to display on leader board, by adding them to an array
@@ -268,7 +268,7 @@ class App extends Component {
                 );
               })
             ) : (
-              <Text>No Characters have been voted for</Text>
+              <Text color="white">No Characters have been voted for</Text>
             )}
           </VStack>
 
