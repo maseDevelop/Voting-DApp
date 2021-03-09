@@ -104,3 +104,7 @@ A detailed example can be found at:
 https://metamask.zendesk.com/hc/en-us/articles/360015489331-How-to-import-an-Account
 
 To add more accounts, you simply just follow the steps above for importing accounts. You do not need to create a new network every time you import a new account. Importing multiply accounts will come in handy as it means that you can simulate an election.
+
+**To Dos:**
+The block change makes use of an API which is used to update the blockchain in a Non-Deterministic way; This is usually not advised. This may mean that the program needs to be updated to initialally start with a list of characters which have already been processed before deployment.  
+
