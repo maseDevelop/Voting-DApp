@@ -16,7 +16,7 @@ contract StarWarsPoll {
     }
 
     //Cast a vote
-    function castVote(uint256 id) public {
+    function castVote(uint256 id) external {
         //Checking that the address has not voted before
         require(!addressVoted[msg.sender], "This address has already voted");
         //Get the mapping of the id and vote count
@@ -26,12 +26,12 @@ contract StarWarsPoll {
     }
 
     //Has the address already voted - CheckIfAccountVoted()
-    function hasAddressVoted() public view returns (bool) {
+    function hasAddressVoted() external view returns (bool) {
         return addressVoted[msg.sender];
     }
 
     //Get top three highest vote counts
-    function getAll() public view returns (uint[] memory) {
+    function getAll() external view returns (uint[] memory) {
         require(totalCharacters != 0,"There are no characters to vote for in the pool");
         uint[] memory ret = new uint[](totalCharacters);
         for (uint256 i = 0; i < totalCharacters; i++) {
@@ -40,7 +40,7 @@ contract StarWarsPoll {
         return ret;
     }
 
-    function setTotalCharacters(uint256 numCharacters) public {
+    function setTotalCharacters(uint256 numCharacters) external {
         require(
             numCharacters != totalCharacters,
             "The Amount of Characters Is already set at the value entered"
@@ -50,7 +50,7 @@ contract StarWarsPoll {
         totalCharacters = numCharacters;
     }
 
-    function getTotalCharacters() public view returns (uint256) {
+    function getTotalCharacters() external view returns (uint256) {
         return totalCharacters;
     }
 }
