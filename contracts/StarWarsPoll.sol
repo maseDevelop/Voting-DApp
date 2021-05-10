@@ -1,56 +1,76 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.4.16 <0.9.0;
 
+/**
+@title Contract that faciliate the voting of Star Wars Characters
+ */
 contract StarWarsPoll {
     //Total Number of Characters in the Poll
-    uint256 private totalCharacters;
+    uint256 private _totalCharacters;
 
     // Read/write
-    mapping(address => bool) private addressVoted; //Address and has voted
+    mapping(address => bool) private _addressVoted; //Address and has voted
 
     //Read/write
-    mapping(uint256 => uint256) private candidates; //Id and vote count
+    mapping(uint256 => uint256) private _candidates; //Id and vote count
 
     constructor() public {
-        totalCharacters = 0;
+        _totalCharacters = 0;
     }
 
-    //Cast a vote
-    function castVote(uint256 id) external {
+    /**
+    @dev Casts a vote for a star wars character based on thier id
+    @param _id The id of the Star wars character
+     */
+    function castVote(uint256 _id) external {
         //Checking that the address has not voted before
-        require(!addressVoted[msg.sender], "This address has already voted");
+        require(!_addressVoted[msg.sender], "This address has already voted");
         //Get the mapping of the id and vote count
-        candidates[id]++;
+        _candidates[_id]++;
         //Setting the address value to voted
-        addressVoted[msg.sender] = true;
+        _addressVoted[msg.sender] = true;
     }
 
-    //Has the address already voted - CheckIfAccountVoted()
+    /**
+    @dev Checks if the account has already voted
+    @return Returns a boolean value based on if the account has already made a vote
+     */
     function hasAddressVoted() external view returns (bool) {
-        return addressVoted[msg.sender];
+        return _addressVoted[msg.sender];
     }
 
-    //Get top three highest vote counts
+    /**
+    @dev Gets vote count of each character
+    @return An array with each characters vote count 
+     */
     function getAll() external view returns (uint[] memory) {
-        require(totalCharacters != 0,"There are no characters to vote for in the pool");
-        uint[] memory ret = new uint[](totalCharacters);
-        for (uint256 i = 0; i < totalCharacters; i++) {
-            ret[i] = candidates[i];
+        require(_totalCharacters != 0,"There are no characters to vote for in the pool");
+        uint[] memory ret = new uint[](_totalCharacters);
+        for (uint256 i = 0; i < _totalCharacters; i++) {
+            ret[i] = _candidates[i];
         }
         return ret;
     }
 
-    function setTotalCharacters(uint256 numCharacters) external {
+    /**
+    @dev Sets the total number of charactesr in the poll
+    @param _numCharacters The number of characters in the poll
+     */
+    function setTotalCharacters(uint256 _numCharacters) external {
         require(
-            numCharacters != totalCharacters,
+            _numCharacters != _totalCharacters,
             "The Amount of Characters Is already set at the value entered"
         );
 
         //Setting the number of characters in the poll
-        totalCharacters = numCharacters;
+        _totalCharacters = _numCharacters;
     }
 
+    /**
+    @dev Gets the total amount of characters in the poll
+    @return returns a uint representing the total amount of charcters
+     */
     function getTotalCharacters() external view returns (uint256) {
-        return totalCharacters;
+        return _totalCharacters;
     }
 }
